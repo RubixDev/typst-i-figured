@@ -1,4 +1,4 @@
-# i-figured
+# I figured
 
 Configurable figure numbering per section.
 
