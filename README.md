@@ -141,3 +141,12 @@ the function just exists for convenience and clarity.
 [`function`]: https://typst.app/docs/reference/foundations/function/
 [`array`]: https://typst.app/docs/reference/foundations/array/
 [`dictionary`]: https://typst.app/docs/reference/foundations/dictionary/
+
+## Acknowledgements
+
+The core code is based off code from [@PgBiel](https://github.com/PgBiel)
+(`@PgSuper` on Discord) and [@aagolovanov](https://github.com/aagolovanov)
+(`@aag.` on Discord). Specifically from
+[this message](https://discord.com/channels/1054443721975922748/1088371919725793360/1158534418760224809)
+and the conversation around
+[here](https://discord.com/channels/1054443721975922748/1088371919725793360/1159172567282749561).

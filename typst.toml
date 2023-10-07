@@ -1,8 +1,9 @@
 [package]
 name = "i-figured"
 version = "0.1.0"
-authors = ["RubixDev", "PgBiel", "aagolovanov"]
+authors = ["RubixDev"]
 entrypoint = "i-figured.typ"
+keywords = ["figure"]
 license = "MIT"
 repository = "https://github.com/RubixDev/typst-i-figured"
 description = "Configurable figure numbering per section."
