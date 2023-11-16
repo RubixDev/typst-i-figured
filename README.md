@@ -60,7 +60,7 @@ Reset all figure counters. To be used in a heading show rule like
 `#show heading: i-figured.reset-counters`.
 
 ```typ
-#let reset-counters(it, level: 1, extra-kinds: ()) = { .. }
+#let reset-counters(it, level: 1, extra-kinds: (), equations: true) = { .. }
 ```
 
 **Arguments:**
@@ -72,6 +72,8 @@ Reset all figure counters. To be used in a heading show rule like
 - `extra-kinds`: [`array`] of ([`str`] or [`function`]) &mdash; Additional
   custom figure kinds. If you have any figures with a `kind` other than `image`,
   `table`, or `raw`, you must add the `kind` here for its counter to be reset.
+- `equations`: [`bool`] &mdash; Whether the counter for math equations should be
+  reset.
 
 **Returns:** [`content`] &mdash; The unmodified heading.
 
