@@ -31,7 +31,7 @@ respectively. These new labels can be used for referencing without problems.
 
 ```typ
 // import the package
-#import "@preview/i-figured:0.1.0"
+#import "@preview/i-figured:0.2.0"
 
 // make sure you have some heading numbering set
 #set heading(numbering: "1.")
@@ -97,7 +97,7 @@ Show a figure with per-section numbering. To be used in a figure show rule like
 - `it`: [`content`] &mdash; The figure element from the show rule.
 - `level`: [`int`] &mdash; How many levels of the current heading counter should
   be added in front. Note that you can control this individually from the
-  `level` parameter on [`show-figure()`](#show-figure).
+  `level` parameter on [`reset-counters()`](#reset-counters).
 - `zero-fill`: [`bool`] &mdash; If `true` and assuming a `level` of `2`, a
   figure after a `1.` heading but before a `1.1.` heading will show `1.0.1` as
   numbering, else the middle zero is excluded. Note that if set to `false`, not
@@ -114,6 +114,38 @@ Show a figure with per-section numbering. To be used in a figure show rule like
   which don't have another prefix set.
 
 **Returns:** [`content`] &mdash; The modified figure.
+
+### `show-equation`
+
+Show a math equation with per-section numbering. To be used in a show rule like
+`#show math.equation: i-figured.show-equation`.
+
+```typ
+#let show-equation(
+  it,
+  level: 1,
+  zero-fill: true,
+  leading-zero: true,
+  numbering: "(1.1)",
+  prefix: "eqt:",
+  only-labeled: false,
+  unnumbered-label: "-",
+) = { .. }
+```
+
+**Arguments:**
+
+For the arguments `level`, `zero-fill`, `leading-zero`, and `numbering` refer to
+[`show-figure()`](#show-figure).
+
+- `it`: [`content`] &mdash; The equation element from the show rule.
+- `prefix`: [`str`] &mdash; The label prefix to use for all equations.
+- `only-labeled`: [`bool`] &mdash; Whether only equations with labels should be
+  numbered.
+- `unnumbered-label`: [`str`] &mdash; A label to explicitly disable numbering
+  for an equation.
+
+**Returns:** [`content`] &mdash; The modified equation.
 
 ### `outline`
 
