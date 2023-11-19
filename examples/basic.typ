@@ -28,7 +28,7 @@
 
 // references to figures must be prefixed with the respective prefix
 Below are @fig:my-figure, @tbl:my-table, @lst:my-listing, @atom:my-atom, and also @eqt:my-equation.
-Also see @fig:my-second-figure and @fig:my-third-figure.
+Also see @fig:my-second-figure @eqt:my-second-equation and @fig:my-third-figure.
 
 #figure([a], caption: [This is a figure.]) <my-figure>
 #figure(table([a]), caption: [This is a table.]) <my-table>
@@ -39,6 +39,7 @@ $ phi.alt := (1 + sqrt(5)) / 2 $ <my-equation>
 = Background
 
 #figure([b], caption: [This is another figure.]) <my-second-figure>
+$ F_n = floor(1 / sqrt(5) phi.alt^n) $ <my-second-equation>
 
 == Some History
 

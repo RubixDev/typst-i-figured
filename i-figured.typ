@@ -2,8 +2,11 @@
 
 #let reset-counters(it, level: 1, extra-kinds: (), equations: true) = {
   if it.level <= level {
-    for kind in (image, table, raw) + (if equations { (math.equation,) } else { () }) + extra-kinds {
+    for kind in (image, table, raw) + extra-kinds {
       counter(figure.where(kind: _prefix + repr(kind))).update(0)
+    }
+    if equations {
+      counter(math.equation).update(0)
     }
   }
   it
