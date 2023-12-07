@@ -72,8 +72,8 @@
   unnumbered-label: "-",
 ) = {
   if (
-    only-labeled and "label" not in it.fields()
-    or "label" in it.fields() and (
+    only-labeled and not it.has("label")
+    or it.has("label") and (
       str(it.label).starts-with(prefix)
       or str(it.label) == unnumbered-label
     )
