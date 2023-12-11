@@ -1,6 +1,6 @@
 [package]
 name = "i-figured"
-version = "0.2.2"
+version = "0.2.3"
 authors = ["RubixDev"]
 entrypoint = "i-figured.typ"
 exclude = ["./examples", "./README.md"]

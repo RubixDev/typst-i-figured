@@ -77,6 +77,7 @@
       str(it.label).starts-with(prefix)
       or str(it.label) == unnumbered-label
     )
+    or not it.block
   ) {
     it
   } else {
