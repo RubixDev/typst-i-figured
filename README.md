@@ -31,7 +31,7 @@ respectively. These new labels can be used for referencing without problems.
 
 ```typ
 // import the package
-#import "@preview/i-figured:0.2.3"
+#import "@preview/i-figured:0.2.4"
 
 // make sure you have some heading numbering set
 #set heading(numbering: "1.")
