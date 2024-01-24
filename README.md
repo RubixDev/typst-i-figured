@@ -60,7 +60,13 @@ Reset all figure counters. To be used in a heading show rule like
 `#show heading: i-figured.reset-counters`.
 
 ```typ
-#let reset-counters(it, level: 1, extra-kinds: (), equations: true) = { .. }
+#let reset-counters(
+  it,
+  level: 1,
+  extra-kinds: (),
+  equations: true,
+  return-orig-heading: true,
+) = { .. }
 ```
 
 **Arguments:**
@@ -74,6 +80,9 @@ Reset all figure counters. To be used in a heading show rule like
   `table`, or `raw`, you must add the `kind` here for its counter to be reset.
 - `equations`: [`bool`] &mdash; Whether the counter for math equations should be
   reset.
+- `return-orig-heading`: [`bool`] &mdash; Whether the original heading element
+  should be included in the returned content. Set this to false if you manually
+  want to construct a heading instead of using the default.
 
 **Returns:** [`content`] &mdash; The unmodified heading.
 
