@@ -29,6 +29,13 @@ same name but prefixed with `fig:`, `tbl:`, or `lst:` for images (and all other
 types of generic figures), tables, and raw code figures (aka listings)
 respectively. These new labels can be used for referencing without problems.
 
+> [!NOTE]
+>
+> When using this package with math equations, make sure you don't already have
+> a numbering set for equations and instead specify it in the
+> [`show-equation()`](#show-equation) call. Also see
+> [#14](https://github.com/RubixDev/typst-i-figured/issues/14).
+
 ```typ
 // import the package
 #import "@preview/i-figured:0.2.4"
